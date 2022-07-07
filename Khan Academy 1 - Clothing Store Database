@@ -1,0 +1,24 @@
+--Create clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, production_time INTEGER);
+INSERT INTO store VALUES (1, "Jeans", 10, 30, 60);
+INSERT INTO store VALUES (2, "Khakis", 3, 40, 60);
+INSERT INTO store VALUES (3, "Cargos", 4, 35, 65);
+INSERT INTO store VALUES (4, "Shorts", 6, 20, 45);
+INSERT INTO store VALUES (5, "Tshirts", 15, 15, 40);
+INSERT INTO store VALUES (6, "Polos", 10, 20, 45);
+INSERT INTO store VALUES (7, "Button_ups", 15, 25, 75);
+INSERT INTO store VALUES (8, "Winter_coats", 2, 50, 70);
+INSERT INTO store VALUES (9, "Windbreaker", 3, 15, 25);
+INSERT INTO store VALUES (10, "Tennis_shoes", 5, 65, 75);
+INSERT INTO store VALUES (11, "Sandals", 8, 24, 35);
+INSERT INTO store VALUES (12, "Socks", 12, 9, 20);
+INSERT INTO store VALUES (13, "Belts", 6, 15, 30);
+INSERT INTO store VALUES (14, "Sun_Glasses", 2, 30, 55);
+INSERT INTO store VALUES (15, "Suspenders", 3, 15, 45);
+
+--Display items with a production time over 45 minutes and ordered by price.
+SELECT* FROM store WHERE production_time >=45 ORDER BY price;
+
+--Display total amount of clothing from database.
+SELECT SUM(quantity) FROM store;
